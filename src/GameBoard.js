@@ -21,7 +21,7 @@
         
                 const cellDiv = document.createElement('div');
 
-                const shape = block.shapes[block.shapeIndex]
+                const shape = block.shapes[block.shapeIndex].shape;
 
                 shape.forEach(el => {
                     if ( y == el[0] + block.y && x == el[1] + block.x){
