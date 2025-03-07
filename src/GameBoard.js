@@ -11,7 +11,7 @@
     
     }
 
-    draw ( shape, blockY, blockX ) {
+    draw ( block ) {
 
         this.gameBoardDiv.innerHTML = '';
         
@@ -25,7 +25,7 @@
 
                 shape.forEach(el => {
                     if ( y == el[0] + block.y && x == el[1] + block.x){
-                        cellDiv.classList.add()
+                        cellDiv.classList.add(block.class)
                     }
                 });
                 
