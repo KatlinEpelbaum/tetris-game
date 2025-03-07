@@ -1,6 +1,6 @@
 class SBlock {
 
-    y = 0;
+    y = 1;
     x = 5;
 
     shapeIndex = 0;
@@ -28,6 +28,15 @@ class SBlock {
         }
 
         return true
+    }
+
+    stop( gameBoard ){
+        this.shapes[this.shapeIndex].shape.forEach(el => {
+        const y = el[0] + this.y;
+        const x = el[1] + this.x;
+
+        gameBoard.state[y][x] = this.class
+        });
     }
 }
 

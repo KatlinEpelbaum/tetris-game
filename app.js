@@ -11,6 +11,7 @@ function run() {
     if (currentBlock.canMoveDown(gameBoard.height)) {
         currentBlock.moveDown();
     } else {
+        currentBlock.stop(gameBoard)
         currentBlock = generateNewBlock();  
     }
     

@@ -4,6 +4,8 @@
     width = 12;
     height = 24;
 
+    state = Array.from(new Array(this.height), () => Array.from(new Array(this.width), () => ''));
+
     constructor () {
 
         this.gameBoardDiv.style.gridTemplateColumns = `repeat(${this.width}, 24px)`;
@@ -20,6 +22,11 @@
             for ( let x = 0; x < this.width; x++ ) {
         
                 const cellDiv = document.createElement('div');
+
+                const cellClass = this.state[y][x];
+                if (cellClass) {
+                    cellDiv.classList.add(cellClass)
+                }
 
                 const shape = block.shapes[block.shapeIndex].shape;
 
