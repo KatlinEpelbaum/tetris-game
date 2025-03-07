@@ -1,6 +1,8 @@
 import { GameBoard } from "./src/GameBoard.js";
 import { SBlock } from "./src/SBlock.js";
-const allBlocks = [SBlock];
+import { ZBlock } from "./src/ZBlock.js";
+
+const allBlocks = [SBlock, ZBlock];
 
 const gameBoard = new GameBoard();
 let currentBlock = generateNewBlock();
