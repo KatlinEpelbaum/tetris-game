@@ -8,7 +8,7 @@ let currentBlock = generateNewBlock();
 const intervalId = setInterval(run, 700);
 
 function run() {
-    if (currentBlock.canMoveDown(gameBoard.height)) {
+    if (currentBlock.canMoveDown(gameBoard)) {
         currentBlock.moveDown();
     } else {
         currentBlock.stop(gameBoard)
