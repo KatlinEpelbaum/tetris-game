@@ -1,19 +1,8 @@
-class ZBlock {
+class Block {
     y = 1;
     x = 5;
 
     shapeIndex = 0;
-
-    shapes = [
-        {
-            'height': 2,
-            'shape': [
-                [0, 0], [0, 1], [1, 1], [1, 2]
-            ]
-        }
-    ];
-    
-    class = 'z-block';
     
     moveDown() {
         this.y++;
@@ -48,4 +37,4 @@ class ZBlock {
     }
 }
 
-export { ZBlock }
+export { Block }
