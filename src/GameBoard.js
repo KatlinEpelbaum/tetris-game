@@ -1,4 +1,4 @@
-    class GameBoard {
+class GameBoard {
     
     gameBoardDiv = document.getElementById('game-board');
     width = 12;
@@ -22,20 +22,21 @@
             for ( let x = 0; x < this.width; x++ ) {
         
                 const cellDiv = document.createElement('div');
-
+                
                 const cellClass = this.state[y][x];
-                if (cellClass) {
-                    cellDiv.classList.add(cellClass)
+                if ( cellClass ) {
+                    cellDiv.classList.add(cellClass);
                 }
 
                 const shape = block.shapes[block.shapeIndex].shape;
 
-                shape.forEach(el => {
-                    if ( y == el[0] + block.y && x == el[1] + block.x){
-                        cellDiv.classList.add(block.class)
+                shape.forEach( el => {
+                    if ( y == el[0] + block.y && x == el[1] + block.x ) {
+                        cellDiv.classList.add(block.class);
                     }
                 });
-                
+
+        
                 this.gameBoardDiv.appendChild(cellDiv);
         
             }
@@ -43,5 +44,8 @@
         }
         
     }
+
+
 }
+
 export { GameBoard }
