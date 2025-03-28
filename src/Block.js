@@ -95,7 +95,7 @@ class Block {
 
         const newShapeIndex = (this.shapeIndex + 1) % this.shapes.length;
 
-        if ( this.x + this.shapes[newShapeIndex].width >= gameBoard.width ) {
+        if ( this.x + this.shapes[newShapeIndex].width > gameBoard.width ) {
             return false;
         }
 
@@ -136,7 +136,6 @@ class Block {
 
         this.shapes[this.shapeIndex].shape.forEach( el => {
             const y = el[0] + this.y;
-            // const x = el[1] + this.x;
 
             if ( y < 0) {
 

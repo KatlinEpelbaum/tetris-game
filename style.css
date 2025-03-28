@@ -15,9 +15,10 @@ body {
     justify-content: center;
     align-items: center;
     width: fit-content;
-    padding: 10px;
+    padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 #game-board {
@@ -72,4 +73,5 @@ body {
 
 #game-over {
     font-size: 1.8rem;
+    padding-bottom: 1rem;
 }

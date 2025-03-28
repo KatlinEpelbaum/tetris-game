@@ -56,6 +56,8 @@ function run () {
     } else {
         currentBlock.stop(gameBoard);
 
+        gameBoard.removeFullRows ();
+
         if (currentBlock.isOutOfBounds()) {
             clearInterval(intervalId);
             gameBoard.gameOver();
