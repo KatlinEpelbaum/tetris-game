@@ -1,8 +1,5 @@
 class Block {
 
-    y = 3;
-    x = 5;
-
     shapeIndex = 0;
 
     moveDown () {
@@ -29,10 +26,13 @@ class Block {
             const y = el[0] + this.y + 1;
             const x = el[1] + this.x;
 
-            if ( gameBoard.state[y][x] ) {
-                ret = false;
+            if ( y >= 0) {
+                if ( gameBoard.state[y][x] ) {
+                    ret = false;
+                }
+    
             }
-
+            
         });
 
         return ret;
@@ -51,8 +51,11 @@ class Block {
             const y = el[0] + this.y;
             const x = el[1] + this.x - 1;
 
-            if ( gameBoard.state[y][x] ) {
-                ret = false;
+            if ( y >= 0) {
+                if ( gameBoard.state[y][x] ) {
+                    ret = false;
+                }
+    
             }
 
         });
@@ -73,8 +76,11 @@ class Block {
             const y = el[0] + this.y;
             const x = el[1] + this.x + 1;
 
-            if ( gameBoard.state[y][x] ) {
-                ret = false;
+            if ( y >= 0) {
+                if ( gameBoard.state[y][x] ) {
+                    ret = false;
+                }
+    
             }
 
         });
@@ -97,8 +103,11 @@ class Block {
             const y = el[0] + this.y;
             const x = el[1] + this.x;
 
-            if ( gameBoard.state[y][x] ) {
-                ret = false;
+            if ( y >= 0) {
+                if ( gameBoard.state[y][x] ) {
+                    ret = false;
+                }
+    
             }
 
         });
@@ -113,8 +122,31 @@ class Block {
             const y = el[0] + this.y;
             const x = el[1] + this.x;
 
-            gameBoard.state[y][x] = this.class;
+            if ( y >= 0) {
+                gameBoard.state[y][x] = this.class;
+            }
         });
+
+    }
+
+    isOutOfBounds() {
+
+
+        let res = false;
+
+        this.shapes[this.shapeIndex].shape.forEach( el => {
+            const y = el[0] + this.y;
+            // const x = el[1] + this.x;
+
+            if ( y < 0) {
+
+                res = true;
+    
+            }
+
+        });
+
+        return res;
 
     }
 

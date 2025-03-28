@@ -2,6 +2,9 @@ import { Block } from "./Block.js";
 
 class ZBlock extends Block {
 
+    y;
+    x;
+
     shapes = [
         {   
             'height': 2,
@@ -16,6 +19,16 @@ class ZBlock extends Block {
     ];
 
     class = 'z-block';
+
+    constructor (gb) {
+
+        super();    
+        this.y = 0 - this.shapes[0].height;
+        this.x = Math.floor((gb.width - this.shapes[0].width) / 2)
+
+    
+    }
+
 
 }
 

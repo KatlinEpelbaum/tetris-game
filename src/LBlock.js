@@ -2,6 +2,9 @@ import { Block } from "./Block.js";
 
 class LBlock extends Block {
 
+    y;
+    x;
+
     shapes = [
         {   
             'height': 3,
@@ -26,6 +29,16 @@ class LBlock extends Block {
     ];
 
     class = 'l-block';
+
+    constructor (gb) {
+
+        super();    
+        this.y = 0 - this.shapes[0].height;
+        this.x = Math.floor((gb.width - this.shapes[0].width) / 2)
+
+    
+    }
+
 
 }
 

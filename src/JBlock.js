@@ -2,6 +2,9 @@ import { Block } from "./Block.js";
 
 class JBlock extends Block {
 
+    y;
+    x;
+
     shapes = [
         {   
             'height': 3,
@@ -16,7 +19,7 @@ class JBlock extends Block {
         {   
             'height': 3,
             'width': 2,
-            'shape': [[0, 0], [0, 1], [1, 1], [2, 1]]
+            'shape': [[0, 0], [0, 1], [1, 0], [2, 0]]
         },
         {   
             'height': 2,
@@ -26,6 +29,15 @@ class JBlock extends Block {
     ];
 
     class = 'j-block';
+
+    constructor (gb) {
+
+        super();    
+        this.y = 0 - this.shapes[0].height;
+        this.x = Math.floor((gb.width - this.shapes[0].width) / 2)
+
+    
+    }
 
 }
 

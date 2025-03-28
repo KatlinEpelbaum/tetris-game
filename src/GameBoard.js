@@ -8,8 +8,8 @@ class GameBoard {
 
     constructor () {
 
-        this.gameBoardDiv.style.gridTemplateColumns = `repeat(${this.width}, 24px)`;
-        this.gameBoardDiv.style.gridTemplateRows = `repeat(${this.height}, 24px)`;
+        this.gameBoardDiv.style.gridTemplateColumns = `repeat(${this.width}, 20px)`;
+        this.gameBoardDiv.style.gridTemplateRows = `repeat(${this.height}, 20px)`;
     
     }
 
@@ -44,7 +44,14 @@ class GameBoard {
         }
         
     }
-
+    gameOver() {
+        const gameOverDiv = document.getElementById('game-over');
+    
+        if (gameOverDiv) {
+            gameOverDiv.classList.remove('hidden'); 
+        }
+    }
+    
 
 }
 

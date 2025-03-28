@@ -1,48 +1,75 @@
 body {
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6;
+    font-family: 'Arial', sans-serif;
 }
 
 .main {
-
-    height: 100vh;
-    margin: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: fit-content;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #game-board {
     display: grid;
-    grid-gap: 1px;
+    grid-gap: 2px;
     background-color: #ffffff;
     border: 2px solid #201218;
+    padding: 2px;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 #game-board div {
-    background-color: rgb(252, 212, 235);
-    font-size: 10px;
+    background-color: rgb(253, 223, 240);
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#game-board div.s-block{
-    background-color: rgb(170, 66, 104);
+#game-board div.s-block {
+    background-color: rgb(255, 105, 145);
 }
-#game-board div.z-block{
-    background-color: rgb(137, 66, 170);
+
+#game-board div.z-block {
+    background-color: rgb(120, 85, 255);
 }
-#game-board div.l-block{
-    background-color: rgb(75, 66, 170);
+
+#game-board div.l-block {
+    background-color: rgb(85, 105, 255);
 }
-#game-board div.j-block{
-    background-color: rgb(66, 170, 135);
+
+#game-board div.j-block {
+    background-color: rgb(85, 255, 130);
 }
-#game-board div.o-block{
-    background-color: rgb(66, 130, 170);
+
+#game-board div.o-block {
+    background-color: rgb(95, 185, 255);
 }
-#game-board div.t-block{
-    background-color: rgb(66, 170, 82);
+
+#game-board div.t-block {
+    background-color: rgb(255, 100, 100);
 }
-#game-board div.i-block{
-    background-color: rgb(170, 165, 66);
+
+#game-board div.i-block {
+    background-color: rgb(85, 200, 255);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#game-over {
+    font-size: 1.8rem;
 }
